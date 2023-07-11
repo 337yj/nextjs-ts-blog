@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CreatePost from "./CreatePost";
 
 // NOTE: Static Data Fetching, 기본적으로 fetch는 자동으로 데이터를 가져오고 캐시함
 async function getPost() {
@@ -24,6 +25,7 @@ const postsPage = async () => {
       {posts?.map((post) => {
         return <PostItem key={post.id} post={post} />;
       })}
+      <CreatePost />
     </section>
   );
 };
